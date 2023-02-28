@@ -19,5 +19,7 @@ import NavBar from './components/NavBarComponent.vue';
 </script>
 
 <style scoped>
-
+/* body {
+  min-width: 100vh;
+} */
 </style>

@@ -1,7 +1,7 @@
 <template>
 
     <section class="contact">
-      <h1 class="title">Contact Me</h1>
+     <h1 class="title">Contact Me</h1> 
 
 
 
@@ -72,26 +72,28 @@ flex-direction: row;
      max-width: 800px;
       margin: 50px auto;
       position: relative;
-      box-shadow: 0 10px 30px 0px rgba(247, 3, 68, 0.1);
       padding: 30px;
       border: solid;
+      border-radius: 50px;
       border-color: black; 
       display: flex;
       flex-direction:column;
       gap: 10px;
       background-color: #171717;
+      text-align: center;
+      color: rgb(0, 255, 200);
+      font-size: 1.2em;
+      
  }
-
- #heading {
-  text-align: center;
-  margin: 2rem;
-  color: rgb(0, 225, 200);
-  font-size: 1.2rem;
-
- }
-    .btn-primary{
-      background: rgb(149, 32, 149);
-      border: solid;
-      border-color: black;
+  .btn-primary{
+  padding: 0.5em;
+  padding-left: 2.3em;
+  padding-right: 2.3em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: .4s ease-in-out;
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  color: rgb(0, 0, 0);
     } 
     </style>
