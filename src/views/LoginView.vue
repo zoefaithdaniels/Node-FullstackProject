@@ -1,20 +1,22 @@
 <template>
     <div class="container">
   <div class="form">
-    <form class="card">
+    <form action="https://formspree.io/f/xoqzwqgn" method="POST" class="row g-3">
+    <div class="card">
     <p id="heading">Login</p>
     <div class="place">
-     <i class="fa-regular fa-user"></i><input type="text" class="placeholder" placeholder="Username">
+     <i class="fa-regular fa-user"></i><input type="text" class="placeholder" placeholder="Username" name="Username" required>
     </div>
     <div class="place">
-        <i class="fa-solid fa-lock"></i><input type="password" class="placeholder" placeholder="Password">
+        <i class="fa-solid fa-lock"></i><input type="password" class="placeholder" placeholder="Password" name="Password" required>
     </div>
     <div class="btn">
     <button class="button1">Login</button>
     <button class="button2">Sign Up</button>
     </div>
     <button class="button3">Forgot Password</button>
-</form>
+  </div>
+    </form>
   </div>
     </div>
 </template>
@@ -32,7 +34,7 @@
   gap: 10px;
   padding-left: 2em;
   padding-right: 2em;
- padding-bottom: 0.4em; 
+  padding-bottom: 0.4em; 
   background-color: white;
   border-radius: 20px;
   width:25rem;

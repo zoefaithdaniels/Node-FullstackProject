@@ -67,6 +67,7 @@
 form input{
 display: flex;
 flex-direction: row;
+border-radius: 2em;
 }
     .contact{
      max-width: 800px;

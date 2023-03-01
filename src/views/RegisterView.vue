@@ -1,21 +1,23 @@
 <template>
     <div class="container">
   <div class="form">
-    <form class="card">
+    <form action="https://formspree.io/f/xoqzwqgn" method="POST" class="row g-3">
+    <div class="card">
     <p id="heading">Register</p>
     <div class="place">
-      <input type="text" class="placeholder" placeholder="Username" required>
+      <i class="fa-solid fa-user-plus"></i><input type="text" class="placeholder" placeholder="Username" name="Username" required>
     </div>
     <div class="place">
-      <input type="email" class="placeholder" placeholder="Email" required>
+      <i class="fa-solid fa-envelope"></i><input type="email" class="placeholder" placeholder="Email" name="Email" required>
     </div>
     <div class="place">
-      <input type="password" class="placeholder" placeholder="Password" required>
+      <i class="fa-solid fa-unlock"></i><input type="password" class="placeholder" placeholder="Password" name="Password" required>
     </div>
     <div class="btn">
         <label><input type="checkbox"/>I agree to all terms & conditions.</label>
     <button class="button1">Register</button>
     </div>
+  </div>
 </form>
   </div>
     </div>
@@ -51,6 +53,7 @@
   margin: 2em;
   color: rgb(0, 255, 200);
   font-size: 1.2em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .card {
@@ -123,6 +126,7 @@
     background-color: white;
     opacity: 1;
     color: black;
+    border-radius: 2em;
    }
 
 
