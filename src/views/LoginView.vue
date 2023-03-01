@@ -39,7 +39,7 @@
   border-radius: 20px;
   width:25rem;
   padding-top: 10px;
-  margin-top: 10px;
+  margin-top: 40px;
 }
 
 #heading {

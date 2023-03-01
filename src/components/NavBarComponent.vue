@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg">
       <div class="logo">
         <img src="https://i.postimg.cc/brkrPZyt/Screenshot-20230228-114118.png">
       </div>
@@ -47,21 +47,25 @@
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-  }
+    text-align: center; 
+    color: black; 
+    }
   
   nav {
     padding: 30px;
-    color: black;
+    color: black; 
+  }
+  .navbar{
+    background-color:rgb(111, 118, 117);
   }
   
   nav a {
     font-weight: bold;
+    text-decoration: none;
   }
   
   nav a.router-link-exact-active {
-    color: #42b98d;
+    color: black;
   }
   .logo img{
     width: rem;

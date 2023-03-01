@@ -1,133 +1,205 @@
 <template>
-    <div class="container">
-  <div class="form">
-    <form action="https://formspree.io/f/xoqzwqgn" method="POST" class="row g-3">
-    <div class="card">
-    <p id="heading">Register</p>
-    <div class="place">
-      <i class="fa-solid fa-user-plus"></i><input type="text" class="placeholder" placeholder="Username" name="Username" required>
-    </div>
-    <div class="place">
-      <i class="fa-solid fa-envelope"></i><input type="email" class="placeholder" placeholder="Email" name="Email" required>
-    </div>
-    <div class="place">
-      <i class="fa-solid fa-unlock"></i><input type="password" class="placeholder" placeholder="Password" name="Password" required>
-    </div>
-    <div class="btn">
-        <label><input type="checkbox"/>I agree to all terms & conditions.</label>
-    <button class="button1">Register</button>
-    </div>
-  </div>
-</form>
-  </div>
-    </div>
+  <div class="container">
+      <div class="title">Registration</div>
+      <form action="https://formspree.io/f/xoqzwqgn" method="POST" class="row g-3">
+          <div class="details-user">
+              <div class="input-box">
+                  <span class="details">Full Name</span>
+                  <input type="text" placeholder="Enter Name"  name="full name" required>
+              </div>
+              <div class="input-box">
+                  <span class="details">Username</span>
+                  <input type="text" placeholder="Username"  name="username" required>
+              </div>
+              <div class="input-box">
+                  <span class="details">Email</span>
+                  <input type="text" placeholder="Enter Email"  name="email" required>
+              </div>
+              <div class="input-box">
+                  <span class="details">Phone Number</span>
+                  <input type="text" placeholder="Enter Phone Number" name="phone number" required>
+              </div>
+              <div class="input-box">
+                  <span class="details">Password</span>
+                  <input type="text" placeholder="Enter Password"  name="password" required>
+              </div>
+              <div class="input-box">
+                  <span class="details">Confirm Password</span>
+                  <input type="text" placeholder="Confirm Password"  name="confirm password" required>
+              </div>
+          </div>
+      </form>
+      <div class="detail-gender">
+          <input type="radio" name="gender" id="dot-1">
+          <input type="radio" name="gender" id="dot-2">
+          <input type="radio" name="gender" id="dot-3">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+              <label for="dot-1">
+                  <span class="dot one"></span>
+                  <span class="gender">Male</span>
+              </label>
+              <label for="dot-2">
+                  <span class="dot two"></span>
+                  <span class="gender">Female</span>
+              </label>
+              <label for="dot-3">
+                  <span class="dot three"></span>
+                  <span class="gender">Prefer not to say</span>
+              </label>
+          </div>
+      </div>
+       <div class="button">
+          <input type="Submit" value="Register">
+       </div>
+
+</div>
 </template>
 
 <script>
-    export default {
-        
-    }
+  export default {
+      
+  }
 </script>
 
 <style scoped>
-.btn label input{
-    margin-right: 3px;
-    border: 20px;
-}
-.container {
+
+body{
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding-left: 2em;
-  padding-right: 2em;
- padding-bottom: 0.4em; 
-  background-color: white;
-  border-radius: 20px;
-  width:25rem;
-  padding-top: 10px;
-  margin-top: 10px;
-}
-
-#heading {
-  text-align: center;
-  margin: 2em;
-  color: rgb(0, 255, 200);
-  font-size: 1.2em;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.card {
-  display: flex; 
-  align-items: center;
+  height: 100vh;
   justify-content: center;
-  gap: 0.5em;
-  border-radius: 25px;
-  padding: 0.6em;
-  border: none;
-  outline: none;
+  align-items: center;
+  padding: 30px;
+}
+.title{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 50px;
+  color: rgb(0, 255, 200);
+}
+.container{
+  max-width: 700px;
+  width: 100%;
+  background: black;
+  padding: 25px 30px;
+  margin-top: 50px;
+  border-radius: 3em;
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container form .details-user{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+.details{
+  color: rgb(0, 255, 200);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+form .details-user .input-box{
+  width: calc(100% / 2 - 20px);
+  margin-bottom: 5px;
+  
+}
+.details-user .input-box .details{
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+.details-user .input-box input{
+height: 45px;  
+width: 100%;
+outline: none;
+border-radius: 2em;
+padding-left: 15px;
+font-size: 16px;
+border-bottom-width: 2px;
+transition: all 0.3s ease;
+}
+.details-user .input-box input:focus,
+.details-user .input-box input:valid{
+border-color: aliceblue;
+}
+.gender-title{
+  color: rgb(0, 255, 200);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+form .detail-gender .gender-title{
+font-size: 20px;
+font-weight: 500;
+}
+.detail-gender .category{
+  display: flex;
+  width: 80%;
+  margin: 15px 0;
+  margin-left: 55px;
+  justify-content: space-between; 
+}
+.detail-gender .category label{
+  display: flex;
+  align-items: center;
+}
+.category{
   color: white;
-  background-color: #171717;
-  
 
 }
-
-.input-icon {
-  height: 1.3em;
-  width: 1.3em;
-  fill: rgb(0, 255, 200);
+.detail-gender .category .dot{
+ height: 18px; 
+ width: 18px;
+ background: #d9d9d9;
+ border-radius: 50%;
+ margin-right: 10px;
+ border: 5px solid transparent;
+ transition: all 0.3s ease;
 }
-
- .place {
-  background: none;
-  border: none;
-  outline: none;
-  color: rgb(0, 255, 200);
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three{
+border-color: rgb(0, 255, 200);
 } 
-
-.card .btn {
-   display: flex; 
-   justify-content: center; 
-   flex-direction: row; 
-   margin-top: 2.5em; 
+form input[type="radio"]{
+  display: none;
 }
 
-.button1 {
-  padding: 0.5em;
-  
-  border-radius: 5px;
-  margin-right: 0.5em;
+ form.button input{
+  height: 100%;
+  width: 100%;
+  outline:none;
+  background-image: (163deg, #00ff75 0%, #3700ff 100%);
   border: none;
-  outline: none;
-  transition: .4s ease-in-out;
-  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
-  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 2em;
+  background-color: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
 }
-
-.button1:hover {
-  background-image: linear-gradient(163deg, #00642f 0%, #13034b 100%);
-  color: rgb(0, 255, 200);
+ .button input{
+  width: 200px;
+  border-radius: 10px;
+  background: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
 }
-
-.form {
-  border-radius: 0;
-  transition: all .2s;
+@media (max-width: 320px) {
+  .container{
+      max-width: 100%;
+  }
+  form .details-user .input-box{
+      margin-bottom: 15px;
+      width: 100%;
+  }
+  form .detail-gender .category{
+      width: 100%;
+  }
+  .container form .detail-user{
+      max-height: 300px;
+      overflow-y: scroll;
+  }
 }
-
-.form:hover {
-  transform: scale(0.98);
-  border-radius: 20px;
-}
-
-.form:hover {
-  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
-}
-
-.placeholder {
-    background-color: white;
-    opacity: 1;
-    color: black;
-    border-radius: 2em;
-   }
 
 
 </style>

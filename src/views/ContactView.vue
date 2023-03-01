@@ -69,6 +69,10 @@ display: flex;
 flex-direction: row;
 border-radius: 2em;
 }
+.title{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 25px;
+}
     .contact{
      max-width: 800px;
       margin: 50px auto;
@@ -80,10 +84,12 @@ border-radius: 2em;
       display: flex;
       flex-direction:column;
       gap: 10px;
-      background-color: #171717;
+      background-color: black;
       text-align: center;
-      color: rgb(0, 255, 200);
+      color: white;
       font-size: 1.2em;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 20px;
       
  }
   .btn-primary{
@@ -97,4 +103,5 @@ border-radius: 2em;
   background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
   color: rgb(0, 0, 0);
     } 
+    
     </style>
