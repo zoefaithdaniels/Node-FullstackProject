@@ -1,7 +1,7 @@
 const express = require('express');
 const route = require('./controller');
 const cors = require('cors');
-const port = parseInt(process.env.PORT) || 3000;
+const port = parseInt(process.env.PORT) || 4000;
 const app = express();
 const {errorHandling} = require('./middleware/ErrorHandling');
 const cookieParser = require('cookie-parser');
@@ -21,9 +21,9 @@ app.use(
     express.urlencoded({extended: false})
 )
 
-// Server is running
+
 app.listen(port, ()=> {
     console.log(`Server is running on port ${port}`)
 });
-// Handling all errors
-app.use(errorHandling);
+
+// app.use(errorHandling);

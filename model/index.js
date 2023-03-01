@@ -20,7 +20,7 @@ class User {
         db.query(strQry, async (err, data) => {
             if(err) throw err;
             if((!data) || (data == null)) {
-                res.status(401).json({err: "You suck"});
+                res.status(401).json({err: "invalid email address"});
             }else{
                 await compare(userPass, data[0].userPass, (cErr, cResult)=>{
                 if(cErr) throw cErr;
@@ -117,8 +117,8 @@ class User {
     }
     updateUser(req, res) {
         let data = req.body;
-        if(data.userPass !== null || 
-            data.userPass !== undefined)
+        if(data.userPass != null || 
+            data.userPass != undefined)
             data.userPass = hashSync(data.userPass, 15);
         const strQry = 
         `
