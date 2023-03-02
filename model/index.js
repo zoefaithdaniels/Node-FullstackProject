@@ -47,7 +47,7 @@ class User {
                     })
                 }
             })
-        }
+    }
     fetchUsers(req, res) {
         const strQry = 
         `
@@ -148,12 +148,12 @@ class User {
                 "A record was removed from a database"} );
         })    
     }
-    }
+}
     
         class Product {
             fetchProducts(req, res) {
                 const strQry = `SELECT id, prodName, prodDescription, category, price, prodQuantity, imgURL
-                FROM Products;`;
+                FROM products;`;
                 db.query(strQry, (err, results)=> {
                     if(err) throw err;
                     res.status(200).json({results: results})
@@ -161,7 +161,7 @@ class User {
             }
             fetchProduct(req, res) {
                 const strQry = `SELECT id, prodName, prodDescription, category, price, prodQuantity, imgURL
-                FROM Products
+                FROM products
                 WHERE id = ?;`;
                 db.query(strQry, [req.params.id], (err, results)=> {
                     if(err) throw err;
@@ -196,7 +196,6 @@ class User {
                 db.query(strQry,[req.body, req.params.id],
                     (err)=> {
                         if(err){
-                            console.log(err);
                             res.status(400).json({err: "Unable to update a record."});
                         }else {
                             res.status(200).json({msg: "Product updated"});
