@@ -15,7 +15,7 @@ class User {
         userPass,
         userRole,
         userProfile
-        FROM Users WHERE emailAdd = ${emailAdd};
+        FROM Users WHERE emailAdd = ${emailAdd}; 
         `
         db.query(strQry, async (err, data) => {
             if(err) throw err;
@@ -29,7 +29,7 @@ class User {
                 createToken({emailAdd, userPass
                 });
                 // Saving our token
-                res.cookie('LegitUser', jwToken, {
+                res.cookie('MainUser', jwToken, {
                     maxAge: 3600000,
                     httpOnly: true
                 })
@@ -153,7 +153,7 @@ class User {
         class Product {
             fetchProducts(req, res) {
                 const strQry = `SELECT id, prodName, prodDescription, category, price, prodQuantity, imgURL
-                FROM products;`;
+                FROM Products;`;
                 db.query(strQry, (err, results)=> {
                     if(err) throw err;
                     res.status(200).json({results: results})
@@ -161,7 +161,7 @@ class User {
             }
             fetchProduct(req, res) {
                 const strQry = `SELECT id, prodName, prodDescription, category, price, prodQuantity, imgURL
-                FROM products
+                FROM Products
                 WHERE id = ?;`;
                 db.query(strQry, [req.params.id], (err, results)=> {
                     if(err) throw err;
@@ -196,6 +196,7 @@ class User {
                 db.query(strQry,[req.body, req.params.id],
                     (err)=> {
                         if(err){
+                            console.log(err);
                             res.status(400).json({err: "Unable to update a record."});
                         }else {
                             res.status(200).json({msg: "Product updated"});
