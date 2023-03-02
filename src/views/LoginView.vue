@@ -22,8 +22,12 @@
 </template>
 
 <script>
+// import {computed} from 'vue@/runtime-core';
+// import {userStore} from 'vuex';
+
     export default {
-        
+      setup() {
+    }
     }
 </script>
 
@@ -45,10 +49,10 @@
 #heading {
   text-align: center;
   margin: 2em;
-  color: rgb(0, 255, 200);
+  color: white;
   font-size: 1.2em;
   font-family:Georgia, 'Times New Roman', Times, serif;
-  font-size: 20px;
+  font-size: 35px;
 }
 
 .card {
@@ -69,7 +73,7 @@
   background: none;
   border: none;
   outline: none;
-  color: rgb(0, 255, 200);
+  color:  #003cff;
 } 
 
 .card .btn {
@@ -94,7 +98,7 @@
 
 .button1:hover {
   background-image: linear-gradient(163deg, #00642f 0%, #13034b 100%);
-  color: rgb(0, 255, 200);
+  color: #003cff;
 }
 
 .button2 {
@@ -111,7 +115,7 @@
 
 .button2:hover {
   background-image: linear-gradient(163deg, #00642f 0%, #13034b 100%);
-  color: rgb(0, 255, 200);
+  color:  #003cff;
 }
 
 .button3 {
@@ -127,7 +131,7 @@
 
 .button3:hover {
   background-image: linear-gradient(163deg, #a00000fa 0%, #d10050 100%);
-  color: rgb(255, 255, 255);
+  color:  #003cff;
 }
 
 .form {
@@ -150,6 +154,4 @@
     color: black;
     border-radius: 2rem;
    }
-
-
 </style>

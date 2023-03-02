@@ -57,6 +57,8 @@
 </template>
 
 <script>
+// import {computed} from '@vue/runtime-core';
+// import {useStore} from 'vuex';
   export default {
       
   }
@@ -74,7 +76,7 @@ body{
 .title{
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 50px;
-  color: rgb(0, 255, 200);
+  color: white;
 }
 .container{
   max-width: 700px;
@@ -96,7 +98,7 @@ body{
   margin: 20px 0 12px 0;
 }
 .details{
-  color: rgb(0, 255, 200);
+  color: white;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 20px;
 }
@@ -125,7 +127,7 @@ transition: all 0.3s ease;
 border-color: aliceblue;
 }
 .gender-title{
-  color: rgb(0, 255, 200);
+  color: white;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 20px;
 }
@@ -161,7 +163,7 @@ font-weight: 500;
 #dot-1:checked ~ .category label .one,
 #dot-2:checked ~ .category label .two,
 #dot-3:checked ~ .category label .three{
-border-color: rgb(0, 255, 200);
+border-color: #003cff;
 } 
 form input[type="radio"]{
   display: none;
@@ -199,6 +201,19 @@ form input[type="radio"]{
       max-height: 300px;
       overflow-y: scroll;
   }
+}
+.container {
+  border-radius: 0;
+  transition: all .2s;
+}
+
+.container:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+
+.container:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
 }
 
 

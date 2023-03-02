@@ -1,15 +1,46 @@
 <template>
-    <div>
+    <div class="container px-5">
+        <div class="row" style="height 50%;">
+            <h2>Products</h2>
+            <div class="container-fluid">
+                <div class="row gy-3 gap-5 mx-3 d-sm-flex justify-content-center mt-5 text-white">
+                    <div class="card" v-for="(product, index ) in products" :key="index">
+                    <img :src="product.imgURL" class="mx-auto d-block" style="width: 15rem;"/>
+                    <div class="card-body bg-secondary" style="width:auto">
+                        <h5 class="card-title">{{ product.prodName }}</h5>
+                        <h5 class="card-title">{{ product.category }}</h5>
+                        <h5 class="card-title">{{ product.price }}</h5>
+                        <p class="card-text">{{ product.prodDescription }}</p>
 
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 </template>
 
 <script>
-    export default {
-        
+import {computed} from '@vue/runtime-core';
+import {useStore} from 'vuex'; 
+export default {
+    setup(){
+        const store= useStore();
+        store.dispatch("fetchProducts");
+        const products = computed (()=> store.state.products);
+    return {
+        products,
+    };
     }
+}
 </script>
+<style>
 
-<style lang="scss" scoped>
+.container {
+
+}
+
+
+
 
 </style>
