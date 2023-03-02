@@ -3,10 +3,10 @@
         <div class="row" style="height 50%;">
             <h2>Products</h2>
             <div class="container-fluid">
-                <div class="row gy-3 gap-5 mx-3 d-sm-flex justify-content-center mt-5 text-white">
-                    <div class="card" v-for="(product, index ) in products" :key="index">
-                    <img :src="product.imgURL" class="mx-auto d-block" style="width: 15rem;"/>
-                    <div class="card-body bg-secondary" style="width:auto">
+                <div class="row gy-3 gap-5 mx-3 d-sm-flex justify-content-center mt-5 text-white;">
+                    <div class="card col-3" v-for="(product, index ) in products" :key="index">
+                    <img :src="product.imgURL" class="mx-auto d-block" style="width: 15rem; height: 15rem; padding-top: 20px;"/>
+                    <div class="card-body text-white" style="width:auto">
                         <h5 class="card-title">{{ product.prodName }}</h5>
                         <h5 class="card-title">{{ product.category }}</h5>
                         <h5 class="card-title">{{ product.price }}</h5>
@@ -34,13 +34,9 @@ export default {
     }
 }
 </script>
-<style>
-
-.container {
-
+<style scoped>
+.card{
+    background-color: black;
 }
-
-
-
 
 </style>

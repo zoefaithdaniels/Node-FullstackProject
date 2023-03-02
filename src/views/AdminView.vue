@@ -55,8 +55,7 @@
 <script>
 import {computed} from '@vue/runtime-core';
 import {useStore} from 'vuex';
-// import AddUser from '@/components/AddUser.vue'
-// import AddProduct from '@/components/AddProduct.vue'
+
 export default {
     setup() {
         const store = useStore();
@@ -71,19 +70,12 @@ export default {
             products
         }
     }
-
-    // data() {
-    //     return { 
-
-    //     }
-    // },
-    // mounted() {
-    //     this.fetchUsers()
-    // },
-    // methods: {
-    //     fetchUsers() {
-    //         this.$store.dispatch('fetchProducts')
-    //     }
-    // }
 }
 </script>
+<style scoped>
+
+.table img{
+    height: 130px;
+}
+
+</style>

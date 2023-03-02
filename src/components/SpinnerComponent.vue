@@ -1,15 +1,14 @@
 <template>
-    <div>
-
-    </div>
+ <div onclick="ldld.toggle()">
+  Toggle Loader
+</div>
+<img class="ldld" src="your-loader-url">   
 </template>
 
 <script>
-    export default {
-        
-    }
+  var ldld = new ldLoader({root: '.ldld'});
 </script>
-
+  
 <style scoped>
 
 </style>
