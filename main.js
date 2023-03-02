@@ -17,7 +17,7 @@ app.use(route);
 app.use(
     cors(),
     cookieParser(),
-    express.json,
+    express.json(),
     express.urlencoded({extended: false})
 )
 
