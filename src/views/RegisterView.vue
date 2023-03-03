@@ -57,11 +57,40 @@
 </template>
 
 <script>
-// import {computed} from '@vue/runtime-core';
-// import {useStore} from 'vuex';
+  import {computed} from '@vue/runtime-core';
+  import {useStore} from 'vuex';
+
   export default {
-      
-  }
+    setup() {
+      const payload ={
+        firstName:'',
+        lastName:'',
+        gender:'',
+        cellphoneNumber:'',
+        email:'',
+        userPass:'',
+        userProfile:''
+      };
+      const store= useStore();
+      const signIn = ()=> {
+        store.dispatch("register", payload)
+        //refresh
+        store.dispatch("fetchUsers")
+      }
+      const msg = 
+      computed( ()=>store.state.message)
+      return {
+        payload,
+        signIn,
+        msg
+
+      }
+    }
+  
+}
+
+
+  
 </script>
 
 <style scoped>
@@ -207,14 +236,6 @@ form input[type="radio"]{
   transition: all .2s;
 }
 
-/* .container:hover {
-  transform: scale(0.98);
-  border-radius: 20px;
-}
-
-.container:hover {
-  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
-} */
 
 
 </style>

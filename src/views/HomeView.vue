@@ -67,21 +67,14 @@ export default {
 
 
 .vid{
-/* overflow: hidden;
-width: 100vw;
-height: 130vh;
-object-fit: cover;
-display: block; */
 max-width: 64rem;
   width: 100%;
   max-height: 30.875rem;
   height: 100%;
   margin: 1.25rem auto;
   padding: 1.051%;
-
-
-
-
 }
-
+.introduction{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 </style>
