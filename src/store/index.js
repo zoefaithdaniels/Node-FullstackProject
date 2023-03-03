@@ -15,6 +15,9 @@ export default createStore({
     message: null
   },
   getters: {
+    showSpinner(state) {
+      return state.showSpinner
+    }
   },
   mutations: {
     setUsers(state, values){
@@ -29,14 +32,12 @@ export default createStore({
     setProduct(state, value){
       state.product= value
     },
-    setSpinner(state, value){
-      state.spinner = value
-    },
     setMessage(state, value){
       state.message = value
+    },
+    setSpinner(state, value) {
+      state.showSpinner = value
     }
-      
-
   },
   actions: {
     async fetchUsers(context){
@@ -50,12 +51,15 @@ export default createStore({
 
     },
     async fetchProducts(context){
+
       const res = await axios.get(`${sneakerURL}products`);
-      const {data, err} = await res.data;
-      if(data) {
-       context.commit('setProducts', data)
+      const {results, err} = await res.data;
+      if(results) {
+       context.commit('setProducts', results)
+       context.commit('setSpinner', false)
       }else{
         context.commit('setMessage', err)
+        context.commit('setSpinner', true)
       }
     }
   },

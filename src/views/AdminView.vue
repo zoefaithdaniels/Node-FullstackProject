@@ -1,4 +1,34 @@
 <template>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Users</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Name</label>
+            <input type="email" class="form-control" id="inputEmail4">
+          </div>
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Category</label>
+            <input type="email" class="form-control" id="inputEmail4">
+          </div>
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Price</label>
+            <input type="email" class="form-control" id="inputEmail4">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+
+
     <div class="container">
      <div class="row">
         <h1>Users</h1>
@@ -13,6 +43,8 @@
                 <th>Email</th>
                 <th>User Role</th>
                 <th>User profile</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </thead>
             <tbody>
                <tr v-for="user in users"  :key="user.userID">
@@ -21,6 +53,8 @@
                 <td>{{ user.emailAdd }}</td>
                 <td>{{ user.userRole }}</td>
                 <td><img class="img-fluid" :src="user.userProfile" :alt ="user.firstName" ></td>
+                <td><button class="btn btn-primary">Edit</button></td>
+                <td><button class="btn btn-primary">Delete</button></td>
              </tr> 
             </tbody>
             </table>
@@ -39,6 +73,8 @@
                 <th>prod Price</th>
                 <th>prod Quantity</th>
                 <th>prod image</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </thead>
             <tbody>
                 <tr v-for="product in products"  :key="product.id">
@@ -47,6 +83,8 @@
              <td>{{  product.price }}</td>
              <td>{{  product.prodQuantity }}</td>
              <td><img :src="product.imgURL" :alt ="product.prodName" ></td>
+             <td><button class="btn btn-primary">Edit</button></td>
+             <td><button class="btn btn-primary">Delete</button></td>
             </tr> 
             </tbody>
         </table>

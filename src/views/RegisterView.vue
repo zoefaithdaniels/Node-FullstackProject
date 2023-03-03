@@ -203,18 +203,18 @@ form input[type="radio"]{
   }
 }
 .container {
-  border-radius: 0;
+  border-radius: 2em;
   transition: all .2s;
 }
 
-.container:hover {
+/* .container:hover {
   transform: scale(0.98);
   border-radius: 20px;
 }
 
 .container:hover {
   box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
-}
+} */
 
 
 </style>

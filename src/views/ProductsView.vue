@@ -1,5 +1,9 @@
 <template>
-    <div class="container px-5">
+    <div>
+        <div v-if="spinner">
+             <SpinnerComponent/>        
+        </div>
+    <div v-else class="container px-5">
         <div class="row" style="height 50%;">
             <h2>Products</h2>
             <div class="container-fluid">
@@ -11,6 +15,8 @@
                         <h5 class="card-title">{{ product.category }}</h5>
                         <h5 class="card-title">{{ product.price }}</h5>
                         <p class="card-text">{{ product.prodDescription }}</p>
+                        <button class="btn btn-primary">View product</button>
+                        <a href="./SingleProductView.vue"></a>
 
                     </div>
                 </div>
@@ -18,18 +24,25 @@
         </div>
     </div>
 </div>
+</div>
 </template>
 
 <script>
 import {computed} from '@vue/runtime-core';
 import {useStore} from 'vuex'; 
+import SpinnerComponent from "../components/SpinnerComponent.vue"
 export default {
+    components: {
+        SpinnerComponent
+    },
     setup(){
         const store= useStore();
         store.dispatch("fetchProducts");
         const products = computed (()=> store.state.products);
+        const spinner = computed (()=> store.state.showSpinner);
     return {
         products,
+        spinner
     };
     }
 }
